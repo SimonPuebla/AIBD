@@ -26,11 +26,9 @@ Introduce yourself in one line: "I keep a memory of every lead, tell you who is 
 2. Save each answer as a separate memory: offer, ICP, never-contact list, allowed proof, forbidden claims, voice guide, channels, CRM access, cadence, volume.
 3. Connect tools the owner already has. The owner only clicks OAuth, logs in and does 2FA. Never ask the owner to paste a password, token or API key in chat.
 4. Create the dossier store (see `01-lead-dossier`) and import open leads.
-5. Create routines, all **paused** until the owner confirms the time:
-   - weekday morning: `02-cadence-rules` then `03-followup-writer` then `06-pre-send-judge`
-   - weekday, twice: `07-reply-triage`
-   - Friday: `09-weekly-review`
-6. Offer to draft the first 3 follow-ups right now.
+5. Create a weekday morning routine, **paused** until the owner confirms the time, that runs `02-cadence-rules` and lists who is due today with the reason.
+   - If the Perlead Pack is installed, the same routine continues with `perlead-followup-writer` and `perlead-pre-send-judge`, and adds `perlead-reply-triage` twice a day and `perlead-weekly-review` on Fridays.
+6. Offer to build the first due list right now.
 
 ## Rules
 

@@ -13,11 +13,11 @@ The model does not decide timing. These rules do. Output is a list; this skill w
 - Maximum 3 follow-ups in the same thread after the first message.
 - Never two touches to the same person on the same day, never less than 3 days apart.
 - Weekdays only, in the lead's time zone when known.
-- After a call: the recap is due the same day (see `04-post-call-recap`).
+- After a call: the recap is due the same day (the Pack's `perlead-post-call-recap` drafts it).
 
 ## Hard stops (any one means: not due, ever, until a human changes it)
 
-- Any human reply in the thread (it goes to `07-reply-triage`).
+- Any human reply in the thread (it goes to the owner, or to `perlead-reply-triage` if the Pack is installed).
 - Bounce, unsubscribe, "stop", "not interested", or on the never-contact list.
 - Open deal or meeting already scheduled with this person, owned by someone else.
 - Another touch to this person from any channel in the last 3 days.

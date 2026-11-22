@@ -13,7 +13,7 @@ Perlead is a digital B2B product for tech companies and any business that wants 
 
 Nothing is ever sent for you. Email, LinkedIn and X messages are always drafts. A human reviews and sends.
 
-> Status: v0.1, early access. Pricing and checkout are not live yet.
+> Status: v0.2, early access. Free Starter in this repo; the full Pack is sold at the site.
 
 ## Who it is for
 
@@ -23,23 +23,21 @@ Nothing is ever sent for you. Email, LinkedIn and X messages are always drafts. 
 
 ## What is inside
 
-| Skill | What it does | Status |
-| --- | --- | --- |
-| [`00-onboarding`](skills/00-onboarding/SKILL.md) | Interviews the owner (offer, ICP, proof, tone, channels, CRM) and connects tools | Ready |
-| [`01-lead-dossier`](skills/01-lead-dossier/SKILL.md) | One record per lead, every fact with a source and date | Ready |
-| [`02-cadence-rules`](skills/02-cadence-rules/SKILL.md) | Deterministic timing: who is due today, who must never be touched | Ready |
-| [`03-followup-writer`](skills/03-followup-writer/SKILL.md) | Writes each follow-up from the dossier, no templates | Ready |
-| [`04-post-call-recap`](skills/04-post-call-recap/SKILL.md) | Recap, next step and follow-up after a call | Ready |
-| [`05-linkedin-drafts`](skills/05-linkedin-drafts/SKILL.md) | LinkedIn notes and DMs as drafts only | Ready |
-| [`06-pre-send-judge`](skills/06-pre-send-judge/SKILL.md) | A second pass that looks for the reason you would stop a draft | Ready |
-| [`07-reply-triage`](skills/07-reply-triage/SKILL.md) | Classifies replies, stops sequences, drafts the answer | Ready |
-| [`08-crm-sync`](skills/08-crm-sync/SKILL.md) | Proposes CRM updates, writes only with permission | Stub |
-| [`09-weekly-review`](skills/09-weekly-review/SKILL.md) | Friday review and one proposed rule change | Stub |
-| [`10-case-study-logger`](skills/10-case-study-logger/SKILL.md) | One ledger line per touch, honest before/after | Stub |
+### Free Starter (this repo, CC BY 4.0)
+
+| Skill | What it does |
+| --- | --- |
+| [`00-onboarding`](skills/00-onboarding/SKILL.md) | Interviews the owner (offer, ICP, proof, tone, channels, CRM) and connects tools |
+| [`01-lead-dossier`](skills/01-lead-dossier/SKILL.md) | One record per lead, every fact with a source and date |
+| [`02-cadence-rules`](skills/02-cadence-rules/SKILL.md) | Deterministic timing: who is due today, who must never be touched |
+
+### Perlead Pack (paid, delivered after purchase)
+
+Follow-up writer, post-call recap, LinkedIn drafts, pre-send judge (seven checks), reply triage, plus CRM sync, weekly review and results ledger as they ship. 12 months of updates. See pricing on the site.
 
 ## Install
 
-Paste the prompt in [`install/ENROLL.md`](install/ENROLL.md) into your agent. It lists the skills, asks for your OK, installs them, and starts the onboarding interview. You only do OAuth clicks, logins and send approvals.
+Paste the prompt in [`install/ENROLL.md`](install/ENROLL.md) into your agent. It lists the Starter skills, asks for your OK, installs them, and starts the onboarding interview. The Pack ships with its own install prompt. You only do OAuth clicks, logins and send approvals.
 
 ## Rules every skill follows
 
@@ -54,11 +52,12 @@ Paste the prompt in [`install/ENROLL.md`](install/ENROLL.md) into your agent. It
 ## Repo layout
 
 ```
-skills/       one folder per skill, each with SKILL.md
-install/      enrollment prompt
-web/          static landing page (index.html + styles.css, no build step)
+skills/       Starter skills, one folder each with SKILL.md
+install/      enrollment prompt for the Starter
+web/          static site (no build step): index, legal pages, 404, fonts, brand
 case-study/   methodology, measurement templates, Case 0
-docs/         plan, payments, outreach playbook, decisions
+docs/         decisions log
+tools/        brand build scripts
 ```
 
 ## Proof
@@ -67,4 +66,8 @@ See [`case-study/case-0-b2b-legaltech.md`](case-study/case-0-b2b-legaltech.md): 
 
 ## License
 
-TODO (Simo): choose a license. See [`LICENSE`](LICENSE).
+- Code (`web/` HTML/CSS, `tools/`): MIT, see [`LICENSE`](LICENSE).
+- Content (`skills/`, `install/`, `case-study/`, `docs/`): CC BY 4.0, see [`LICENSE-CONTENT`](LICENSE-CONTENT).
+- Fonts in `web/fonts/`: SIL Open Font License 1.1 (license files alongside).
+- The Perlead name, logo and files in `web/brand/` are not licensed for reuse.
+- The paid Pack is under its own commercial license, shipped with it.

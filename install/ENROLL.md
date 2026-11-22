@@ -1,9 +1,9 @@
-# Install Perlead in your agent
+# Install the Perlead Starter
 
 Copy everything inside the box below and paste it into a new chat with your Grok Bot (or another agent that supports skills). Your agent will show you what it is about to install and wait for your OK.
 
 ```
-Install the Perlead follow-up skills for me.
+Install the free Perlead Starter skills for me.
 
 Source: https://github.com/SimonPuebla/AIBD (branch main, folder skills/).
 Version: read the VERSION file in that repo.
