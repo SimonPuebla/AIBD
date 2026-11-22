@@ -1,0 +1,2 @@
+date,lead_hash,channel,touch_number,event,reply_class,meeting,proposal,deal_amount_usd,judge_verdict,owner_edited,notes
+2026-01-05,EXAMPLE-ONLY,email,1,draft_created,,,,,pass,,example row: delete before use
