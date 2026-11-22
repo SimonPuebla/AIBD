@@ -3,134 +3,218 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Perlead: every lead gets its own memory</title>
-  <meta name="description" content="A follow-up system for B2B sales that installs into your AI agent. A dossier per lead, follow-ups written from each lead's history, a judge before every draft. You press send.">
+  <title>Perlead · Follow-up for B2B sales, written from each lead's history</title>
+  <meta name="description" content="Perlead installs into your AI agent. It keeps a record for every lead and prepares each follow-up from that record. You review and send.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- TODO(Simo): replace every CREEM_CHECKOUT_URL with the real Creem checkout links. Prices are placeholders. -->
-  <header class="nav wrap">
-    <a class="logo" href="#">Perlead</a>
-    <nav>
-      <a href="#how">How it works</a>
-      <a href="#pack">Skill pack</a>
-      <a href="#case">Case study</a>
+<!-- TODO(Simo): replace both CREEM_CHECKOUT_URL links with real Creem checkout URLs. Prices are placeholders (TBD). -->
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="wordmark" href="#">Perlead</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#method">Method</a>
+      <a href="#product">Product</a>
+      <a href="#results">Results</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
     </nav>
-  </header>
-
-  <section class="hero wrap">
-    <p class="eyebrow">Follow-up system for B2B sales teams</p>
-    <h1>Every lead gets its own memory.<br>You just press send.</h1>
-    <p class="lead">Perlead installs into your AI agent. It keeps a dossier for each lead, writes every follow-up from that lead's real history, and checks each draft before you see it. Nothing goes out until you send it.</p>
-    <div class="cta-row">
-      <a class="btn primary" href="https://github.com/SimonPuebla/AIBD/blob/main/install/ENROLL.md">Install the free Starter</a>
-      <a class="btn" href="#pricing">See plans</a>
+    <div class="nav-cta">
+      <a class="link" href="https://github.com/SimonPuebla/AIBD/blob/main/install/ENROLL.md">Install free</a>
+      <a class="btn btn-solid btn-sm" href="CREEM_CHECKOUT_URL" data-todo="creem-pack">Get the Pack</a>
     </div>
-    <p class="fine">Works with Grok Bot. Your inbox, your CRM, your voice.</p>
-  </section>
+  </div>
+</header>
 
-  <section class="problem wrap">
-    <h2>Deals rarely die from a bad pitch. They die from silence.</h2>
-    <div class="grid3">
-      <div class="card"><h3>Follow-ups slip</h3><p>The call went well, then the week happened. Nobody wrote back on day 3.</p></div>
-      <div class="card"><h3>Templates sound like templates</h3><p>"Just bumping this up" tells the buyer you forgot what they said.</p></div>
-      <div class="card"><h3>AI SDRs send too much</h3><p>Volume tools guess, invent and spam. Your domain and your name pay for it.</p></div>
+<main>
+<section class="hero">
+  <div class="container">
+    <p class="label">Follow-up for B2B sales teams</p>
+    <h1>Every lead remembered.<br>Every follow-up earned.</h1>
+    <p class="lead">Perlead installs into your AI agent. It keeps a record for every lead and prepares each follow-up from that record. You review and send.</p>
+    <div class="actions">
+      <a class="btn btn-solid" href="CREEM_CHECKOUT_URL" data-todo="creem-pack">Get the Pack</a>
+      <a class="btn btn-outline" href="https://github.com/SimonPuebla/AIBD/blob/main/install/ENROLL.md">Install the free Starter</a>
     </div>
-  </section>
 
-  <section id="how" class="how wrap">
-    <h2>How it works</h2>
+    <figure class="mockup" aria-label="Example: a lead record and a follow-up draft awaiting approval">
+      <div class="mockup-bar"><span></span><span></span><span></span><em>Perlead · Example data</em></div>
+      <div class="mockup-body">
+        <div class="pane dossier">
+          <p class="label">Lead record</p>
+          <h3>Northwind Freight</h3>
+          <p class="meta">Head of Operations · Proposal sent · Day 4</p>
+          <dl class="facts">
+            <div><dt>Said on call</dt><dd>"Quarter close is our bottleneck."<span>Call notes · Nov 12</span></dd></div>
+            <div><dt>We promised</dt><dd>Two reference customers in logistics<span>Recap email · Nov 12</span></dd></div>
+            <div><dt>Asked</dt><dd>Whether onboarding fits before January<span>Reply · Nov 14</span></dd></div>
+            <div><dt>Next step</dt><dd>Follow-up due today<span>Cadence rule · day 3 / 7 / 14</span></dd></div>
+          </dl>
+        </div>
+        <div class="pane draft">
+          <div class="draft-head">
+            <p class="label">Follow-up draft</p>
+            <span class="pill pill-warn">Awaiting your approval</span>
+          </div>
+          <p class="draft-to">To: Head of Operations, Northwind Freight<br>Re: Proposal and onboarding timing</p>
+          <div class="draft-text">
+            <p>Hi Dana,</p>
+            <p>You asked whether onboarding could land before January. It can if we start the week of Dec 1; the plan is attached on one page.</p>
+            <p>As promised, two logistics teams have agreed to take a call about their quarter close. Would Thursday work to connect you?</p>
+          </div>
+          <ul class="checks">
+            <li><span class="pill pill-ok">Grounded</span> Every fact has a source</li>
+            <li><span class="pill pill-ok">Continuity</span> Answers their last question</li>
+            <li><span class="pill pill-ok">One ask</span> Thursday intro</li>
+          </ul>
+          <div class="draft-actions"><span class="btn btn-outline btn-sm">Edit</span><span class="btn btn-solid btn-sm">Send from my inbox</span></div>
+        </div>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<section class="band" aria-label="Principles">
+  <div class="container band-grid">
+    <div><p class="label">Drafts only</p><p>Nothing leaves without a person pressing send.</p></div>
+    <div><p class="label">Sourced</p><p>No source, no personalization.</p></div>
+    <div><p class="label">Rule-based timing</p><p>Day 3, 7 and 14. Any reply stops the sequence.</p></div>
+    <div><p class="label">Your stack</p><p>Your inbox, your calendar, your CRM.</p></div>
+  </div>
+</section>
+
+<section id="method" class="section">
+  <div class="container row">
+    <div class="row-intro">
+      <p class="label">Method</p>
+      <h2>Deals are rarely lost to a weak pitch. They are lost to silence.</h2>
+      <p>Follow-ups slip after a good call. Templates tell buyers you forgot what they said. Volume tools send more and listen less. Perlead does the opposite: fewer messages, each one specific.</p>
+    </div>
     <ol class="steps">
-      <li><span>1</span><div><h3>A dossier per lead</h3><p>What they said, what you promised, what they asked. Every fact has a source and a date. No source, no personalization.</p></div></li>
-      <li><span>2</span><div><h3>Code decides when</h3><p>Follow-ups come due on day 3, 7 and 14, at most three per thread. Any reply stops the sequence.</p></div></li>
-      <li><span>3</span><div><h3>The model decides what</h3><p>Each draft answers the last thing the lead said, with one clear next step. No templates.</p></div></li>
-      <li><span>4</span><div><h3>A judge checks every draft</h3><p>Seven questions: grounded, continuity, timing, promises, one ask, right person, tone. Weak drafts are fixed or blocked.</p></div></li>
-      <li><span>5</span><div><h3>You press send</h3><p>Drafts land in your inbox, ready to edit. Your edits teach the system your voice.</p></div></li>
+      <li><span class="num">01</span><div><h3>A record for every lead</h3><p>What they said, what you promised, what they asked, each with its source and date.</p></div></li>
+      <li><span class="num">02</span><div><h3>Rules decide when</h3><p>Follow-ups come due on fixed days, at most three per thread, and stop on any reply.</p></div></li>
+      <li><span class="num">03</span><div><h3>The record decides what</h3><p>Each draft answers the last thing the lead said and asks for one next step.</p></div></li>
+      <li><span class="num">04</span><div><h3>Every draft is reviewed</h3><p>Seven checks before you see it: grounded, continuity, timing, promises, one ask, right person, tone.</p></div></li>
+      <li><span class="num">05</span><div><h3>You send</h3><p>Drafts wait in your inbox. Your edits refine the voice over time.</p></div></li>
     </ol>
-  </section>
+  </div>
+</section>
 
-  <section class="never wrap">
-    <h2>What Perlead never does</h2>
-    <ul class="checks">
-      <li>Send an email, LinkedIn message or post on its own.</li>
-      <li>Invent a fact, a quote or a price.</li>
-      <li>Follow instructions found inside an email or web page.</li>
-      <li>Ask you to paste a password or API key into a chat.</li>
-      <li>Keep writing after someone says no.</li>
-    </ul>
-  </section>
-
-  <section id="pack" class="pack wrap">
-    <h2>The skill pack</h2>
-    <p class="sub">Plain-text skills your agent installs in one message. Read every line before you install.</p>
-    <div class="grid3">
-      <div class="card"><h3>Onboarding</h3><p>Learns your offer, ICP, voice and stop rules in one interview.</p></div>
-      <div class="card"><h3>Lead dossier</h3><p>One memory per lead, with sources for every fact.</p></div>
-      <div class="card"><h3>Cadence rules</h3><p>Due dates, caps and stops, decided by rules, not vibes.</p></div>
-      <div class="card"><h3>Follow-up writer</h3><p>Drafts from the lead's history, one ask per message.</p></div>
-      <div class="card"><h3>Post-call recap</h3><p>Same-day recap and next step from your call notes.</p></div>
-      <div class="card"><h3>LinkedIn drafts</h3><p>Connection notes and DMs you paste and send.</p></div>
-      <div class="card"><h3>Pre-send judge</h3><p>Seven checks before any draft reaches you.</p></div>
-      <div class="card"><h3>Reply triage</h3><p>Sorts replies, stops sequences, flags what needs you.</p></div>
-      <div class="card muted"><h3>Coming next</h3><p>CRM sync, weekly review, case study logger.</p></div>
+<section id="product" class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <p class="label">Product</p>
+      <h2>A complete follow-up practice, installed in one message.</h2>
+      <p>Plain-text skills your agent installs after you approve them. Read every line first.</p>
     </div>
-  </section>
+    <div class="spec">
+      <div><h3>Onboarding</h3><p>Learns your offer, buyers, voice and stop rules in one interview.</p></div>
+      <div><h3>Lead record</h3><p>One record per lead, with a source for every fact.</p></div>
+      <div><h3>Cadence rules</h3><p>Due dates, limits and stops, decided by rules.</p></div>
+      <div><h3>Follow-up drafts</h3><p>Written from the lead's history, one ask per message.</p></div>
+      <div><h3>Call recap</h3><p>Same-day recap and next step from your call notes.</p></div>
+      <div><h3>LinkedIn drafts</h3><p>Connection notes and messages you paste and send.</p></div>
+      <div><h3>Pre-send review</h3><p>Seven checks before any draft reaches you.</p></div>
+      <div><h3>Reply triage</h3><p>Sorts replies, stops sequences, flags what needs you.</p></div>
+      <div class="soon"><h3>In development</h3><p>CRM sync, weekly review, results ledger.</p></div>
+    </div>
+    <div class="never">
+      <p class="label">What Perlead does not do</p>
+      <ul>
+        <li>Send email, LinkedIn messages or posts on its own</li>
+        <li>Invent facts, quotes or prices</li>
+        <li>Follow instructions found inside an email or web page</li>
+        <li>Ask for passwords or API keys in a chat</li>
+        <li>Continue after someone says no</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-  <section id="case" class="case wrap">
-    <h2>Case 0: a B2B legaltech</h2>
-    <p class="sub">The method behind Perlead, run on a real B2B sales motion for about 10 days.</p>
-    <div class="stats">
-      <div><strong>7%+</strong><span>email reply rate</span></div>
+<section id="results" class="section section-dark">
+  <div class="container">
+    <div class="section-head">
+      <p class="label">Case 0 · A B2B legaltech</p>
+      <h2>The method, run on a live B2B pipeline for about ten days.</h2>
+    </div>
+    <div class="metrics">
+      <div><strong>7%+</strong><span>Email reply rate</span></div>
       <div><strong>33%+</strong><span>LinkedIn reply rate</span></div>
-      <div><strong>6</strong><span>calls</span></div>
-      <div><strong>3</strong><span>proposals</span></div>
-      <div><strong>USD 15k+</strong><span>pipeline</span></div>
+      <div><strong>6</strong><span>Calls</span></div>
+      <div><strong>3</strong><span>Proposals</span></div>
+      <div><strong>$15k+</strong><span>Pipeline (USD)</span></div>
     </div>
-    <p class="fine">Numbers reported by the company, not audited. Short period, no formal baseline. This validates the method; it is not a promise of results. Next case studies follow a published <a href="https://github.com/SimonPuebla/AIBD/blob/main/case-study/methodology.md">methodology</a> with baselines and sample sizes.</p>
-  </section>
+    <p class="caveat">Figures reported by the company and not audited. Short period, no formal baseline. They show the method works in a real sales motion; they are not a forecast. Future case studies follow a published <a href="https://github.com/SimonPuebla/AIBD/blob/main/case-study/methodology.md">methodology</a> with baselines and sample sizes.</p>
+  </div>
+</section>
 
-  <section id="pricing" class="pricing wrap">
-    <h2>Pricing</h2>
-    <p class="sub">Early pricing. Final prices to be announced.</p>
-    <div class="grid3">
-      <div class="card plan">
-        <h3>Starter</h3>
+<section id="pricing" class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="label">Pricing</p>
+      <h2>Start free. Pay when it earns its place.</h2>
+      <p>Early pricing. Final prices will be published before launch.</p>
+    </div>
+    <div class="pricing">
+      <div class="plan">
+        <p class="label">Starter</p>
         <p class="price">Free</p>
-        <ul><li>Onboarding</li><li>Lead dossier</li><li>Cadence rules</li><li>Install guide</li></ul>
-        <a class="btn" href="https://github.com/SimonPuebla/AIBD/blob/main/install/ENROLL.md">Install free</a>
+        <p class="plan-desc">The foundation: lead records and timing rules.</p>
+        <ul><li>Onboarding</li><li>Lead record</li><li>Cadence rules</li><li>Install guide</li></ul>
+        <a class="btn btn-outline" href="https://github.com/SimonPuebla/AIBD/blob/main/install/ENROLL.md">Install free</a>
       </div>
-      <div class="card plan featured">
-        <h3>Pack</h3>
-        <p class="price">USD 29 to 49 <small>TBD</small></p>
-        <ul><li>All skills</li><li>Judge and reply triage</li><li>Measurement templates</li><li>3 months of updates</li></ul>
-        <a class="btn primary" href="CREEM_CHECKOUT_URL" data-todo="creem-pack">Get the Pack</a>
+      <div class="plan plan-featured">
+        <p class="label">Pack</p>
+        <p class="price">$29–49 <span class="tag">TBD</span></p>
+        <p class="plan-desc">The full practice, from first draft to reply.</p>
+        <ul><li>All skills</li><li>Pre-send review and reply triage</li><li>Measurement templates</li><li>Three months of updates</li></ul>
+        <a class="btn btn-solid" href="CREEM_CHECKOUT_URL" data-todo="creem-pack">Get the Pack</a>
       </div>
-      <div class="card plan">
-        <h3>Done-for-you setup</h3>
-        <p class="price">USD 300 to 500 <small>TBD</small></p>
-        <ul><li>45-minute setup call</li><li>Agent installed and connected</li><li>Tuned to your voice</li><li>2 weeks of adjustments</li></ul>
-        <a class="btn" href="CREEM_CHECKOUT_URL" data-todo="creem-setup">Book a setup</a>
+      <div class="plan">
+        <p class="label">Setup</p>
+        <p class="price">$300–500 <span class="tag">TBD</span></p>
+        <p class="plan-desc">Installed, connected and tuned with you.</p>
+        <ul><li>45-minute setup session</li><li>Inbox, calendar and CRM connected</li><li>Tuned to your voice</li><li>Two weeks of adjustments</li></ul>
+        <a class="btn btn-outline" href="CREEM_CHECKOUT_URL" data-todo="creem-setup">Book a setup</a>
       </div>
     </div>
-    <p class="fine">Payments processed by a merchant of record. Taxes handled at checkout.</p>
-  </section>
+    <p class="fine">Prices in USD. Payments processed by a merchant of record; applicable taxes calculated at checkout.</p>
+  </div>
+</section>
 
-  <section id="faq" class="faq wrap">
-    <h2>FAQ</h2>
-    <details><summary>Is this a course?</summary><p>No. It is a working system that installs into your AI agent and runs on your real leads from day one.</p></details>
-    <details><summary>Does it send messages for me?</summary><p>Never. It writes drafts. You review, edit and send every email and message yourself.</p></details>
-    <details><summary>Which agent does it need?</summary><p>It is built and tested for Grok Bot. The skills are plain text, so other agents that support skills may work too.</p></details>
-    <details><summary>Which tools does it connect to?</summary><p>Your email (Gmail to start), your calendar, and optionally your CRM or a spreadsheet. You connect them yourself; you never paste keys into a chat.</p></details>
-    <details><summary>How is this different from an AI SDR?</summary><p>AI SDRs optimize for volume. Perlead optimizes for the leads you already have: every message grounded in what that lead said, checked before you see it.</p></details>
-    <details><summary>Where does my data live?</summary><p>In your own agent, inbox and CRM. Perlead has no server and sees none of your data.</p></details>
-    <details><summary>Can I get a refund?</summary><p>Refund policy to be published before launch.</p></details>
-  </section>
+<section id="faq" class="section section-alt">
+  <div class="container row">
+    <div class="row-intro">
+      <p class="label">FAQ</p>
+      <h2>Questions</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Is this a course?</summary><p>No. It is a working system that installs into your AI agent and runs on your real pipeline from the first day.</p></details>
+      <details><summary>Does it send messages for me?</summary><p>No. It prepares drafts. You review, edit and send every email and message yourself.</p></details>
+      <details><summary>Which agent does it need?</summary><p>It is built and tested for Grok Bot. The skills are plain text, so other agents that support skills may work as well.</p></details>
+      <details><summary>Which tools does it connect to?</summary><p>Your email (Gmail first), your calendar, and optionally your CRM or a spreadsheet. You connect them through your agent; you never paste keys into a chat.</p></details>
+      <details><summary>How is it different from an AI SDR?</summary><p>AI SDRs are built for volume. Perlead is built for the leads you already have: each message grounded in what that lead said and reviewed before you see it.</p></details>
+      <details><summary>Where does my data live?</summary><p>In your own agent, inbox and CRM. Perlead runs no server and does not see your data.</p></details>
+      <details><summary>Is there a refund policy?</summary><p>A refund policy will be published before launch.</p></details>
+    </div>
+  </div>
+</section>
+</main>
 
-  <footer class="wrap">
-    <p>Perlead. Follow-ups grounded in each lead's history.</p>
-    <p class="fine"><a href="https://github.com/SimonPuebla/AIBD">Source on GitHub</a></p>
-  </footer>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="wordmark" href="#">Perlead</a>
+      <p>Follow-up for B2B sales, written from each lead's history.</p>
+    </div>
+    <div><p class="label">Product</p><a href="#method">Method</a><a href="#product">Skills</a><a href="#pricing">Pricing</a></div>
+    <div><p class="label">Resources</p><a href="https://github.com/SimonPuebla/AIBD/blob/main/install/ENROLL.md">Install guide</a><a href="https://github.com/SimonPuebla/AIBD/blob/main/case-study/methodology.md">Methodology</a><a href="https://github.com/SimonPuebla/AIBD">Source</a></div>
+  </div>
+  <div class="container fine footer-note">Perlead prepares drafts. A person reviews and sends every message.</div>
+</footer>
 </body>
 </html>
